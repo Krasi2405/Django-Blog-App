@@ -1,0 +1,50 @@
+
+
+
+@media screen and (max-width: 720px) {
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2,h3 {
+    font-size: 1.5em;
+  }
+  
+  nav a {
+    font-size: 1.25em;
+  }
+  
+  p {
+    font-size: 12px 
+  }
+  
+  .two_collumn {
+    width: 90%; 
+  }
+  
+  
+  
+  
+}
+
+@media screen and (max-width: 620px) {
+  .left_side, .right_side {
+    width: 100%;
+  }
+  
+@media screen and (max-width: 360px) {
+  
+  h1 {
+    font-size: 1.75em;
+  }
+  
+  h2, h3 {
+    font-size: 1.4em;
+  }
+  
+  nav a {
+    font-size: 1.1em;
+  }
+  
+  
