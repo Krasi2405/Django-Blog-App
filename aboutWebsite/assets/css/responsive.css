@@ -32,6 +32,11 @@
   .left_side, .right_side {
     width: 100%;
   }
+
+  h1, h2 {
+    display: block;
+    float: none;
+  }
   
 @media screen and (max-width: 360px) {
   

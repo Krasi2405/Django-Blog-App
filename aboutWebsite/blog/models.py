@@ -6,11 +6,15 @@ class Blog(models.Model):
 	created_at = models.DateTimeField(auto_now_add = True)
 	writer = models.CharField(max_length = 255)
 
-# Dont use just yet cant figure out how to upload images!
+
 class Image(models.Model):
-	src = models.ImageField()
+	src = models.ImageField(upload_to = "assets/images")
 	blog = models.ForeignKey(Blog)
 	order = models.IntegerField(default = 0)
+
+	def path(self):
+		image_path = self.src.url.split('/')[1:]
+		return '/'.join(image_path)
 
 
 class Paragraph(models.Model):

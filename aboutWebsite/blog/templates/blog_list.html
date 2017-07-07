@@ -1,1 +1,12 @@
-HELLO!
+{% extends 'layout.html' %}
+
+{% block content %}
+{% for blog in blog_list %}
+	<div>
+		<h3>
+		<a href = "{% url 'blog:blog_detail' pk=blog.pk %}">{{ blog.title }}</a>
+		</h3>
+		<p>{{ blog.created_at }}</p>
+	</div>
+{% endfor %}
+{% endblock %}
