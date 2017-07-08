@@ -10,8 +10,8 @@ def blog_list(request):
 
 def blog_detail(request, pk):
 	blog = Blog.objects.get(pk=pk)
-	images = Image.objects.all()
-	paragraphs = Paragraph.objects.all()
+	images = blog.image_set.all()
+	paragraphs = blog.paragraph_set.all()
 	blog_parts_list = list(images) + list(paragraphs)
 	blog_parts_list.sort(key=lambda x: x.order)
 	return render(request, 'blog_detail.html', 
