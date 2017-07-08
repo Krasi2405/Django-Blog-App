@@ -5,13 +5,16 @@
 
 
 {% block content %}
-	<h3>{{ blog.title }}</h3>
+	<h3 id = "title">{{ blog.title }}</h3>
+	<p id = "date">{{ blog.created_at }}</p>
 	{% for part in blog_parts_list %}
 		{% if part|isinst:"Paragraph" %}
 			<p>Paragraph: {{ part.text }}</p>
 		{% elif part|isinst:"Image" %}
-			<p>Img loc: {{ part.src }}</p>
-			<img src = "{% static part.path %}">
+			<div class = "image_box thumbnail">
+				<img src = "{% static part.path %}">
+				<p>Img loc: {{ part.src }}</p>
+			</div>
 		{% else %}
 			<p>Unknown Type: {{ part }}</p>
 			<p>If intended, add to the elif statement in blog_detail.html</p>

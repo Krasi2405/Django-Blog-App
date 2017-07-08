@@ -6,6 +6,9 @@ class Blog(models.Model):
 	created_at = models.DateTimeField(auto_now_add = True)
 	writer = models.CharField(max_length = 255)
 
+	class Meta():
+		ordering = ['-created_at', ]
+
 
 class Image(models.Model):
 	src = models.ImageField(upload_to = "assets/images")

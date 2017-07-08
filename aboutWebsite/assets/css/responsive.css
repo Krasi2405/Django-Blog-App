@@ -37,6 +37,10 @@
     display: block;
     float: none;
   }
+
+  p {
+    font-size: 1em;
+  }
   
 @media screen and (max-width: 360px) {
   
@@ -51,5 +55,8 @@
   nav a {
     font-size: 1.1em;
   }
+
+
+/* BLOG SPECIFIC */
   
   

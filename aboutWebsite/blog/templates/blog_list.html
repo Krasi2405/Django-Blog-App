@@ -2,11 +2,13 @@
 
 {% block content %}
 {% for blog in blog_list %}
-	<div>
-		<h3>
-		<a href = "{% url 'blog:blog_detail' pk=blog.pk %}">{{ blog.title }}</a>
-		</h3>
-		<p>{{ blog.created_at }}</p>
-	</div>
+	<a href = "{% url 'blog:blog_detail' pk=blog.pk %}">
+		<div class = "thumbnail blog_box">
+			<h3>
+			{{ blog.title }}
+			</h3>
+			<p>{{ blog.created_at }}</p>
+		</div>
+	</a>
 {% endfor %}
 {% endblock %}
