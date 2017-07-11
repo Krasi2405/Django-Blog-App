@@ -5,7 +5,7 @@ from .models import Blog, Paragraph, Image
 # Create your views here.
 def blog_list(request):
 	blogs = Blog.objects.all()
-	return render(request, 'blog_list.html', {'blog_list': blogs})
+	return render(request, 'blog/blog_list.html', {'blog_list': blogs})
 
 
 def blog_detail(request, pk):
@@ -14,5 +14,5 @@ def blog_detail(request, pk):
 	paragraphs = blog.paragraph_set.all()
 	blog_parts_list = list(images) + list(paragraphs)
 	blog_parts_list.sort(key=lambda x: x.order)
-	return render(request, 'blog_detail.html', 
+	return render(request, 'blog/blog_detail.html', 
 		{'blog': blog, 'blog_parts_list': blog_parts_list})
