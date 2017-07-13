@@ -2,19 +2,22 @@
 
 {% block content %}
 <div class = "left_side">
-  <h3>Best way to contact me</h3>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt ex sit amet elit laoreet ornare. Fusce interdum leo vel elit commodo, et aliquet dui sodales. Suspendisse ipsum nunc, porttitor non purus sed, elementum malesuada tortor. Ut id turpis a tellus bibendum pellentesque. Praesent finibus varius turpis. Morbi posuere gravida massa vitae euismod. Mauris eu purus fermentum, pellentesque enim sit amet, sagittis est. Aliquam fermentum odio a urna cursus faucibus. Phasellus feugiat, tortor vitae laoreet vestibulum, nulla nisl pharetra felis, in faucibus felis turpis ac quam. Pellentesque finibus ut lorem vel mattis. Cras iaculis sapien efficitur tellus consectetur, non mattis magna posuere. Morbi massa elit, semper vel lorem vel, aliquam pharetra purus. Suspendisse a volutpat metus.</p>
+  <form action = "" method = "POST">
+    {{ form.as_p }}
+    {% csrf_token %}
+    <input type="submit">
+  </form>
 </div>
 <div class = "right_side">
-  <h3>Contact Details</h3>
+  <h3>Other ways to contact me</h3>
   <ul>
     <li>
-      <span class = "glyphicon glyphicon-envelope"></span>
-      <a href = "mailto:krasi2405@gmail.com">krasi2405@gmail.com</a>
+      
+      <a href = "mailto:krasi2405@gmail.com"><span class = "glyphicon glyphicon-envelope"></span>krasi2405@gmail.com</a>
     </li>
     <li>
-      <span class = "glyphicon glyphicon-download-alt"></span>
-      <a href = "https://github.com/Krasi2405">Github Account</a>
+      
+      <a href = "https://github.com/Krasi2405"><span class = "glyphicon glyphicon-download-alt"></span>Github Account</a>
     </li>
   </ul>
 </div>

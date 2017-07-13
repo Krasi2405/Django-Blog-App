@@ -114,6 +114,10 @@ footer, #jump_up {
   width: 40%;
 }
 
+.left_side *, .right_side * {
+  width: 100%;
+}
+
 .right_side {
   float: right;
 }
@@ -128,6 +132,10 @@ footer, #jump_up {
   padding: 3px 0;
 }
 
+.right_side .glyphicon {
+  display: inline;
+  margin-right: 5px;
+}
 
 /* Blog Specific */
 #title {
