@@ -1,16 +1,18 @@
 from django.contrib import admin
 
-from .models import Blog, Image, Paragraph
+from . import models
 
 class ImageInLine(admin.StackedInline):
-	model = Image
+	model = models.Image
 
 class ParagraphInLine(admin.StackedInline):
-	model = Paragraph
+	model = models.Paragraph
 
+	
 class BlogAdmin(admin.ModelAdmin):
-	inlines = [ImageInLine, ParagraphInLine, ]
+	inlines = [ImageInLine, ParagraphInLine]
 
-admin.site.register(Blog, BlogAdmin)
-admin.site.register(Image)
-admin.site.register(Paragraph)
+admin.site.register(models.Blog, BlogAdmin)
+admin.site.register(models.Image)
+admin.site.register(models.Paragraph)
+admin.site.register(models.Category)
