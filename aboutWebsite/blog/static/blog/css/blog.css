@@ -1,0 +1,48 @@
+
+
+.search_form {
+	width: 100%;
+	display: block;
+	padding-bottom: 40px;
+}
+
+.search_form * {
+	display: inline;
+	height: 30px;
+}
+
+.search_form .search_button {
+	display: block;
+	width: 100%;
+}
+
+.search_form #id_search_field {
+	width: 60%;
+	float: left;
+}
+
+.search_form #id_categories {
+	width: 40%;
+	float: left;
+}
+
+
+
+
+
+ul.errorlist, .search_form  label {
+	display: none;
+}
+
+@media screen and (min-width: 620px) {
+
+	.search_form #id_categories, .search_form .search_button {
+		width: 20%;
+	}
+
+	.search_form .search_button {
+		display: inline;
+		float: right;
+	}
+
+}
