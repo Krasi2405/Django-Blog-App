@@ -43,6 +43,7 @@ class Paragraph(models.Model):
 		return self.text
 
 
+
 class Category(models.Model):
 	name = models.CharField(max_length = 255)
 

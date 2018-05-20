@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^about/', views.about, name = "about"),
     url(r'^contact/', views.contact, name = "contact"),
     url(r'^blog/', include('blog.urls', namespace = "blog")),
+    url(r'^games/', include('gameViewer.urls', namespace = "gameViewer")),
 ]
 
 urlpatterns += staticfiles_urlpatterns()

@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<form class = "search_form" action="" method = "GET">
+	{% csrf_token %}
+	{{ search_form.as_p }}
+	<input type="submit" value = "search" class = "search_button">
+</form>
+
+{% endblock %}
