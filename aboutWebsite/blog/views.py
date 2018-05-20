@@ -23,10 +23,6 @@ def blog_list(request):
 			regex = r'\b{}\b'.format(search_form.cleaned_data['search_field'])
 			blogs = blogs.filter(title__regex=regex)
 			
-
-
-
-
 	return render(request, 'blog/blog_list.html', 
 		{'blog_list': blogs, 'search_form': search_form})
 

@@ -11,6 +11,13 @@ class Blog(models.Model):
 	class Meta():
 		ordering = ['-created_at', ]
 
+	def blog_categories(self):
+		category_str = ""
+		for category in Category.objects.all():
+			category_str += "{}, ".format(category.name)
+		return category_str[:-2] #Remove last ', '	
+
+
 	def __str__(self):
 		return self.title
 
@@ -41,3 +48,8 @@ class Category(models.Model):
 
 	def __str__(self):
 		return self.name
+
+	class Meta:
+		verbose_name_plural = "categories"
+
+# TODO: Create a writer model
