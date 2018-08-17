@@ -5,6 +5,7 @@ from django.dispatch import receiver
 import os
 import patoolib
 
+
 def get_upload_path(instance, filename):
 	base_game_path = os.path.join("assets", "games")
 	return os.path.join(base_game_path, filename)
@@ -21,6 +22,9 @@ class Game(models.Model):
 		base_game_path = os.path.join(os.path.join("assets", "games"))
 		extracted_dir = os.path.join(base_game_path, self.name)
 		return extracted_dir
+
+	def get_startup_file_path(self):
+		return os.path.abspath(os.path.join(self.get_extracted_dir_path(), "index.html"))
 
 
 @receiver(post_save, sender = Game)

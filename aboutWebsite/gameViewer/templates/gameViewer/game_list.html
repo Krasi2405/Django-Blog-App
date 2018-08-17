@@ -1,10 +1,18 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<form class = "search_form" action="" method = "GET">
-	{% csrf_token %}
-	{{ search_form.as_p }}
-	<input type="submit" value = "search" class = "search_button">
-</form>
 
+	<form class = "search_form" action="" method = "GET">
+		{% csrf_token %}
+		{{ search_form.as_p }}
+		<input type="submit" value = "search" class = "search_button">
+	</form>
+
+	{% for game in games %}
+		<div class = "thumbnail">
+		<a href = "{% url 'gameViewer:game_detail' pk=game.pk %}">
+				<h1>{{ game.name }}</h1>
+		</a>
+		</div>
+	{% endfor %}
 {% endblock %}
