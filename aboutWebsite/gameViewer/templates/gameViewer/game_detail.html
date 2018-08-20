@@ -2,13 +2,9 @@
 
 {% load staticfiles %}
 {% block content %}
-	<iframe src="{% static game.get_startup_file_path %}" 
+	<iframe class = "game_window" src="{% static game.get_startup_file_path %}" 
 		style="border:0px #000000 none;" 
 		name="Game name" 
 		scrolling="no" 
-		frameborder="1"
-		marginheight="px"
-		marginwidth="320px" 
-		height="720px" 
-		width="1080px">
+		frameborder="1">
 {% endblock %}
