@@ -123,6 +123,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 MEDIA_ROOT = BASE_DIR
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "assets"),
     'static'

@@ -28,6 +28,7 @@ class Image(models.Model):
 	order = models.IntegerField(default = 0)
 
 	def path(self):
+		# Remove first direction because it points to assets. Assets is already defined as static dir.
 		image_path = self.src.url.split('/')[1:]
 		return '/'.join(image_path)
 

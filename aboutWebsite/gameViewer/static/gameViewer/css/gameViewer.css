@@ -1,0 +1,38 @@
+.game_box {
+	width: 100%;
+	background-color: #333;
+	display: inline-block;
+}
+
+.game_box img {
+	width: 100%;
+}
+
+.title {
+	padding: 0;
+	margin: 0;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+@media screen and (min-width: 360px) {
+	.game_box {
+		width: 50%;
+	}
+}
+
+@media screen and (min-width: 720px) {
+	.game_box {
+		width: 33%;
+	}
+
+	.title {
+		font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 1080) {
+	.game_box {
+		width: 25%;
+	}
+}

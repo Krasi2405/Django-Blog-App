@@ -1,5 +1,3 @@
-
-
 .search_form {
 	width: 100%;
 	display: block;
@@ -26,7 +24,7 @@
 	float: left;
 }
 
-ul.errorlist, .search_form  label {
+ul.errorlist, .search_form label {
 	display: none;
 }
 
@@ -40,5 +38,4 @@ ul.errorlist, .search_form  label {
 		display: inline;
 		float: right;
 	}
-
 }

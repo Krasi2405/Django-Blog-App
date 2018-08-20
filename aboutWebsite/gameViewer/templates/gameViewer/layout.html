@@ -1,0 +1,7 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block css %}
+	{{ block.super }}
+	<link rel = "stylesheet" href = "{% static 'gameViewer/css/gameViewer.css' %}">
+{% endblock %}
